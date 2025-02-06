@@ -1,29 +1,38 @@
 import React from "react";
-
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm Tarun</h1>
+        <h1 className={styles.title}>
+          <span className={styles.greeting}>Hi, I'm</span>
+          <span className={styles.name}>Tarun Varshney</span>
+        </h1>
         <p className={styles.description}>
-          I'm a full-stack developer with 5 years of experience using React and
-          NodeJS. Reach out if you'd like to learn more!
+          Full-stack developer with 1 years of experience in
+          <span className={styles.highlight}> React</span> and
+          <span className={styles.highlight}> NodeJS</span>
         </p>
-        <a href="mailto:myemail@email.com" className={styles.contactBtn}>
-          Contact Me
+        <a href="path/to/resume.pdf" className={styles.contactBtn} target="_blank" rel="noopener noreferrer">
+          Resume
+          {/* <span className={styles.arrow}>→</span> */}
         </a>
       </div>
-      <img
-        src={getImageUrl("hero/heroImage.png")}
-        alt="Hero image of me"
-        className={styles.heroImg}
-      />
-      <div className={styles.topBlur} />
-      <div className={styles.bottomBlur} />
+      <div className={styles.imageContainer}>
+        {/* <img
+          src={getImageUrl("hero/heroImage.png")}
+          alt="Hero image of me"
+          className={styles.heroImg}
+        /> */}
+      </div>
+      <div className={styles.gradientOrbs}>
+        <div className={styles.topBlur} />
+        <div className={styles.bottomBlur} />
+      </div>
     </section>
   );
 };
+
 export default Hero;
