@@ -110,5 +110,19 @@
   }
 }
 .highlight {
-  color: #d33b19; /* Change this to any color you prefer */
+  color: #d33b19; 
+}
+
+/* Hero.module.css */
+.largeLetter {
+  font-size: 6rem; /* Base font size */
+  font-weight: bold;
+  color: #ff5733; /* Vibrant color */
+  text-transform: uppercase; /* Capitalize letters */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.largeLetter:hover {
+  color: #feb47b; /* Subtle color change on hover */
 }

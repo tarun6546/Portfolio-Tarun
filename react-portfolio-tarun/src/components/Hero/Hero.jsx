@@ -7,25 +7,22 @@ const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>
           <span className={styles.greeting}>Hi, I'm </span>
-          <span className={styles.name}>Tarun Varshney</span>
+          <span className={styles.name}>
+            <span className={styles.largeLetter}>T</span>arun{" "}
+            <span className={styles.largeLetter}>V</span>arshney
+          </span>
         </h1>
         <p className={styles.description}>
           "I’m a passionate <strong className={styles.highlight}>MERN Stack</strong> and <strong className={styles.highlight}>Java Developer</strong>, focused on building scalable 
           applications, crafting clean code, 
           and continuously learning new technologies to deliver innovative solutions."
         </p>
-        {/* Update the button to trigger the download */}
         <a 
-          href="react-portfolio-tarun\public\tarundocx"
+          href="/path-to-your-resume.pdf" 
           download 
           className={styles.contactBtn}>
           Resume
         </a>
-      </div>
-      <div className={styles.imageContainer}></div>
-      <div className={styles.gradientOrbs}>
-        <div className={styles.topBlur} />
-        <div className={styles.bottomBlur} />
       </div>
     </section>
   );
