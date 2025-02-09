@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -39,11 +38,14 @@ export const Navbar = () => {
             <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="#contact">Resume</a>
+            <a href="react-portfolio-tarun\public\tarundocx" download target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
           </li>
         </ul>
       </div>
     </nav>
   );
 };
+
 export default Navbar;

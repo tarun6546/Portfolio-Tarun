@@ -109,3 +109,6 @@
     align-items: center;
   }
 }
+.highlight {
+  color: #d33b19; /* Change this to any color you prefer */
+}
