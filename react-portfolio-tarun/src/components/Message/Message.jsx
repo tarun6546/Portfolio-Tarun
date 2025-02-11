@@ -21,6 +21,7 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
+  // fj;fs
 
   return (
     <section className={styles.contact} id="contact">
