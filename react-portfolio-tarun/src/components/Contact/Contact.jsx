@@ -52,7 +52,7 @@ const Contact = () => {
         ))}
       </div>
     </section>
-    // juhjk
+    
   );
 };
 

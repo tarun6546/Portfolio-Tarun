@@ -38,8 +38,8 @@ export const Navbar = () => {
             <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="react-portfolio-tarun\public\tarundocx" download target="_blank" rel="noopener noreferrer">
-              Resume
+            <a href="message">
+              Connect
             </a>
           </li>
         </ul>
