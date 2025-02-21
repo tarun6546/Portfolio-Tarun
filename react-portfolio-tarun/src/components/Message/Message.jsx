@@ -24,7 +24,7 @@ const Contact = () => {
   // fj;fs
 
   return (
-    <section className={styles.contact} id="contact">
+    <section className={styles.contact} id="message">
       <div className={styles.contactContent}>
         <h2>Let's Connect</h2>
         <p>Have a project in mind? I'd love to hear about it.</p>

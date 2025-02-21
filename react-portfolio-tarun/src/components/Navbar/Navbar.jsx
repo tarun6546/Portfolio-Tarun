@@ -38,9 +38,9 @@ export const Navbar = () => {
             <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="message">
+            {/* <a href="message" className={styles.connect}>
               Connect
-            </a>
+            </a> */}
           </li>
         </ul>
       </div>
