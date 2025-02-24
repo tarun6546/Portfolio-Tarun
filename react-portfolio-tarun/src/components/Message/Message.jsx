@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-/* filepath: /src/components/Message/Message.jsx */
+import emailjs from '@emailjs/browser';
 import styles from './Message.module.css';
 
 const Contact = () => {
@@ -9,10 +9,33 @@ const Contact = () => {
     message: ''
   });
 
+  const [status, setStatus] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log(formData);
+
+    emailjs
+      .send(
+        'your_service_id', 
+        'your_template_id', 
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_message: formData.message
+        },
+        'your_public_key'
+      )
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setStatus('Message sent successfully!');
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          setStatus('Failed to send message. Please try again.');
+        }
+      );
   };
 
   const handleChange = (e) => {
@@ -21,7 +44,6 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
-  // fj;f
 
   return (
     <section className={styles.contact} id="message">
@@ -71,12 +93,11 @@ const Contact = () => {
           </button>
         </form>
 
-        <div className={styles.contactInfo}>
-          
-        </div>
+        {status && <p className={styles.statusMessage}>{status}</p>}
       </div>
     </section>
   );
 };
 
 export default Contact;
+// jkj
