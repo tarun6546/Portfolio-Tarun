@@ -1,30 +1,20 @@
 [
     {
-      "role": "Software Engineer",
-      "organisation": "Google",
-      "startDate": "Sept, 2022",
-      "endDate": "Present",
-      "experiences": ["Worked on Google Maps", "Reduced load times by 50%"],
+      "role": "Web Developer",
+      "organisation": "OctaNet Services Pvt. Ltd.",
+      "startDate": "May, 2024",
+      "endDate": "June, 2024",
+      "experiences": ["Worked on UI Templates", "Developed to-do list feature"],
       "imageSrc": "history/google.png"
     },
     {
-      "role": "UI Designer",
-      "organisation": "Mirosoft",
-      "startDate": "Aug, 2021",
-      "endDate": "Aug, 2022",
-      "experiences": ["Worked on Windows 11", "Designed the control panel"],
+      "role": "Trainee",
+      "organisation": "Job Oreinted Value-Added Course",
+      "startDate": "July, 2024",
+      "endDate": "June, 2024",
+      "experiences": ["Learnt basics of HTML, CSS,JavaScript and Backend With NodeJS", "Created an Anti-Procrastination Web Tool"],
       "imageSrc": "history/microsoft.png"
-    },
-    {
-      "role": "SWE Intern",
-      "organisation": "Netflix",
-      "startDate": "Apr, 2020",
-      "endDate": "Jun, 2020",
-      "experiences": [
-        "Worked on component library",
-        "Helped create UI components"
-      ],
-      "imageSrc": "history/netflix.png"
     }
+    
   ]
   
