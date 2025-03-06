@@ -2,6 +2,11 @@ import React from "react";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
+  // Correct way to open the resume in Vite
+  const openResume = () => {
+    window.open("/Gemini Tarun Resume.pdf", "_blank");
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -17,12 +22,11 @@ const Hero = () => {
           applications, crafting clean code, 
           and continuously learning new technologies to deliver innovative solutions."
         </p>
-        <a 
-          href="/path-to-your-resume.pdf" 
-          download 
+        <button 
+          onClick={openResume} 
           className={styles.contactBtn}>
           Resume
-        </a>
+        </button>
       </div>
     </section>
   );
