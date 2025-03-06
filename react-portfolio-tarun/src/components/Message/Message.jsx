@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState, useEffect } from 'react';
+import emailjs from "@emailjs/browser";
+
 import styles from './Message.module.css';
 
 const Contact = () => {
@@ -11,19 +12,23 @@ const Contact = () => {
 
   const [status, setStatus] = useState('');
 
+  useEffect(() => {
+    emailjs.init('cNv8dvFnmOaT860Bp'); // Initialize with your public key
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs
       .send(
-        'your_service_id', 
-        'your_template_id', 
+        'service_0di07vl', // Replace with your EmailJS Service ID
+        'template_hj1gn95', // Replace with your EmailJS Template ID
         {
           user_name: formData.name,
           user_email: formData.email,
           user_message: formData.message
         },
-        'your_public_key'
+        'cNv8dvFnmOaT860Bp' // Replace with your EmailJS Public Key
       )
       .then(
         (response) => {
@@ -40,7 +45,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     setFormData({
-      ...formData, 
+      ...formData,
       [e.target.name]: e.target.value
     });
   };
@@ -66,7 +71,7 @@ const Contact = () => {
 
           <div className={styles.formGroup}>
             <input
-              type="email" 
+              type="email"
               name="email"
               placeholder="Your Email"
               value={formData.email}
@@ -100,4 +105,3 @@ const Contact = () => {
 };
 
 export default Contact;
-// j
